@@ -5,16 +5,11 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 
 public class UserFunctions extends GenericFunctions{
@@ -58,7 +53,7 @@ public class UserFunctions extends GenericFunctions{
 		
 	}
 	
-	//Open the Telstra Health web application
+	//Open the Ebay web application
 	//Input	  			:	void
 	//Output   			: 	Opens the Ebay web application
 	//Last Modified By  :	Prakash
@@ -119,9 +114,9 @@ public class UserFunctions extends GenericFunctions{
 		System.out.println(driver.findElement(By.xpath(".//*[@id='fshippingCost']/span")).getText());
 	}
 
-	//Enter the login details and click on Login button
-	//Input				:	
-	//Output			: 	Opens the Telstra Health application page for the entered login ID
+	//Validate the Postage
+	//Input				:	void
+	//Output			: 	Validates the postage fee
 	//Last Modified By	:	Prakash
 	//Last Modified On	:	Nov 01, 2017
 	public void ebay_VerifyPostage() {
@@ -135,6 +130,29 @@ public class UserFunctions extends GenericFunctions{
 		System.out.println(strMessage);
 	}
 	
+	//To Register Users
+	//Input			: void
+	//Output		: All the browser sessions are closed
+	//Last Modified By	:	Prakash
+	//Last Modified On	:	Nov 01, 2017
+	
+	public void ebay_RegUser(){
+		ebay_gf_ClickObject(driver, objRep, "reglink_id");
+		
+		String firstname_excel = xls.getCellData("TestUsers", "FirstName", 2);
+		String lastname_excel = xls.getCellData("TestUsers", "LastName", 2);
+		String email_excel = xls.getCellData("TestUsers", "EmailID", 2);
+		String password_excel = xls.getCellData("TestUsers", "Password", 2);
+
+		ebay_gf_EnterData(driver, objRep, "fname_id", firstname_excel);
+		ebay_gf_EnterData(driver, objRep, "lname_id", lastname_excel);
+		ebay_gf_EnterData(driver, objRep, "email_id", email_excel);
+		ebay_gf_EnterData(driver, objRep, "pwd_id", password_excel);
+		
+		ebay_gf_ClickObject(driver, objRep, "regbtn_id");
+		
+	}
+
 	//To Close the Browser Session
 	//Input			: void
 	//Output		: All the browser sessions are closed

@@ -19,7 +19,7 @@ public class Ebay_Test extends UserFunctions{
 	}
 	
 	@Test
-	public void ebay_ValAdmnSummary() throws IOException{
+	public void ebay_Scenario1() throws IOException{
 		
 		//Open the IE Browser
 		ebay_OpenBrowser();
@@ -33,18 +33,27 @@ public class Ebay_Test extends UserFunctions{
 		//Select the Featured Stores
 		ebay_SelectFeaturedStore();
 		
-		//Seach for the specified item
+		//Search for the specified item
 		ebay_SearchItem();
 		
 		//Select the items from the list
 		ebay_SelectItem();
-		
 		
 		//Validates the data for the specified item			
 		ebay_VerifyPostage();
 		
 		//To Close the Browser Session
 		ebay_CloseBrowser();
+		
+	}
+	
+	@Test
+	public void Scenario2(){
+		//Open the IE Browser
+		ebay_OpenBrowser();
+		
+		//Open the Ebay web application
+		ebay_OpenApplication();
 		
 	}
 }
