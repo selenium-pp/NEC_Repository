@@ -55,5 +55,31 @@ public class Ebay_Test extends UserFunctions{
 		//Open the Ebay web application
 		ebay_OpenApplication();
 		
+		//Open the Ebay web application
+		ebay_RegUser();
+		
+		//To Close the Browser Session
+		ebay_CloseBrowser();
+
 	}
+	
+	@Test
+	public void Scenario3(){
+		//Open the IE Browser
+		ebay_OpenBrowser();
+		
+		//Open the Ebay web application
+		ebay_OpenApplication();
+		
+		//Open the Ebay web application
+		for(int i=1; i<5; i++){
+			ebay_AddSearchCriteria(i);			
+		}
+		
+		//To Close the Browser Session
+		ebay_CloseBrowser();
+
+	}
+
+
 }

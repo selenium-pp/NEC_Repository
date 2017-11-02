@@ -153,6 +153,38 @@ public class UserFunctions extends GenericFunctions{
 		
 	}
 
+//	Keyword	FromPrice	ToPrice	BuyFormats
+	
+	//To Search using specific criteria
+	//Input			: void
+	//Output		: All the browser sessions are closed
+	//Last Modified By	:	Prakash
+	//Last Modified On	:	Nov 01, 2017
+	
+	public void ebay_AddSearchCriteria(int searchcnt){
+
+		ebay_gf_ClickObject(driver, objRep, "Advancedlnk_id");			
+
+		String keyword_excel = xls.getCellData("AdvSearch", "Keyword", searchcnt);
+		String fromprice_excel = xls.getCellData("AdvSearch", "FromPrice", searchcnt);
+		String toprice_excel = xls.getCellData("AdvSearch", "ToPrice", searchcnt);
+		String buyfomats_excel = xls.getCellData("AdvSearch", "BuyFormats", searchcnt);
+
+		ebay_gf_EnterData(driver, objRep, "keyword_id", keyword_excel);
+		ebay_gf_EnterData(driver, objRep, "fprice_xpath", fromprice_excel);
+		ebay_gf_EnterData(driver, objRep, "tprice_xpath", toprice_excel);
+		if(buyfomats_excel.equals("Auction")){
+			ebay_gf_ClickObject(driver, objRep, "Actionchk_id");
+		}	
+		else if(buyfomats_excel.equals("Buy It Now")){	
+			ebay_gf_ClickObject(driver, objRep, "Buynowchk_id");			
+		}
+		else{	
+			ebay_gf_ClickObject(driver, objRep, "CAdschk_id");			
+		}
+
+	}
+	
 	//To Close the Browser Session
 	//Input			: void
 	//Output		: All the browser sessions are closed
