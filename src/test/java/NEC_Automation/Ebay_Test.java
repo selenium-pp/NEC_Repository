@@ -72,7 +72,7 @@ public class Ebay_Test extends UserFunctions{
 		ebay_OpenApplication();
 		
 		//Open the Ebay web application
-		for(int i=1; i<5; i++){
+		for(int i=1; i<3; i++){
 			ebay_AddSearchCriteria(i);			
 		}
 		
