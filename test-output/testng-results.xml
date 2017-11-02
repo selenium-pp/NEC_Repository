@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113411" started-at="2017-11-01T09:33:44Z" finished-at="2017-11-01T09:35:37Z">
+  <suite name="Default suite" duration-ms="38739" started-at="2017-11-02T03:09:17Z" finished-at="2017-11-02T03:09:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113411" started-at="2017-11-01T09:33:44Z" finished-at="2017-11-01T09:35:37Z">
-      <class name="NEC_Automation.Ebay_TestFlow">
-        <test-method status="PASS" signature="ehs_Initialization()[pri:0, instance:NEC_Automation.Ebay_TestFlow@3ffc5af1]" name="ehs_Initialization" is-config="true" duration-ms="2174" started-at="2017-11-01T20:33:42Z" finished-at="2017-11-01T20:33:44Z">
+    <test name="Default test" duration-ms="38739" started-at="2017-11-02T03:09:17Z" finished-at="2017-11-02T03:09:55Z">
+      <class name="NEC_Automation.Ebay_Test">
+        <test-method status="PASS" signature="ebay_Initialization()[pri:0, instance:NEC_Automation.Ebay_Test@5c3bd550]" name="ebay_Initialization" is-config="true" duration-ms="2172" started-at="2017-11-02T14:09:14Z" finished-at="2017-11-02T14:09:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ehs_Initialization -->
-        <test-method status="PASS" signature="ehs_ValAdmnSummary()[pri:0, instance:NEC_Automation.Ebay_TestFlow@3ffc5af1]" name="ehs_ValAdmnSummary" duration-ms="113364" started-at="2017-11-01T20:33:44Z" finished-at="2017-11-01T20:35:37Z">
+        </test-method> <!-- ebay_Initialization -->
+        <test-method status="PASS" signature="Scenario3()[pri:0, instance:NEC_Automation.Ebay_Test@5c3bd550]" name="Scenario3" duration-ms="38645" started-at="2017-11-02T14:09:17Z" finished-at="2017-11-02T14:09:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ehs_ValAdmnSummary -->
-      </class> <!-- NEC_Automation.Ebay_TestFlow -->
+        </test-method> <!-- Scenario3 -->
+      </class> <!-- NEC_Automation.Ebay_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="NEC_Automation.Ebay_TestFlow">
+      <class name="NEC_Automation.Ebay_Test">
         <methods>
-          <include name="ehs_ValAdmnSummary"/>
-          <include name="ehs_Initialization"/>
+          <include name="ebay_Initialization"/>
+          <include name="Scenario3"/>
         </methods>
-      </class> <!-- NEC_Automation.Ebay_TestFlow -->
+      </class> <!-- NEC_Automation.Ebay_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -137,7 +137,7 @@ public class UserFunctions extends GenericFunctions{
 	//Last Modified On	:	Nov 01, 2017
 	
 	public void ebay_RegUser(){
-		ebay_gf_ClickObject(driver, objRep, "reglink_id");
+		ebay_gf_ClickObject(driver, objRep, "reglink_xpath");
 		
 		String firstname_excel = xls.getCellData("TestUsers", "FirstName", 2);
 		String lastname_excel = xls.getCellData("TestUsers", "LastName", 2);
@@ -183,6 +183,8 @@ public class UserFunctions extends GenericFunctions{
 			ebay_gf_ClickObject(driver, objRep, "CAdschk_id");			
 		}
 
+		ebay_gf_ClickObject(driver, objRep, "advsearchbtn_id");			
+		
 	}
 	
 	//To Close the Browser Session

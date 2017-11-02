@@ -17,7 +17,7 @@ public class GenericFunctions {
 	public void ebay_gf_EnterData(WebDriver driver, Properties prop, String locator, String data)
 	{
 		WebElement textField = ebay_gf_GetLocation(driver, prop, locator);
-		System.out.println(data);
+		textField.clear();
 		textField.sendKeys(data);
 	}
 	

@@ -14,11 +14,14 @@ public class App
 {
     public static void main( String[] args ) throws InterruptedException
     {
- /*       System.out.println( "Hello World!" );
+        System.out.println( "Hello World!" );
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Ebay_Project\\Drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.ebay.com.au/");
+        Thread.sleep(3000);
+        driver.findElement(By.id("gh-ug-flex")).click();
+        /*       
         Actions action = new Actions(driver);
         Thread.sleep(5000);
         WebElement we = driver.findElement(By.xpath(".//*[@id='s0-container']/li[3]/a"));
